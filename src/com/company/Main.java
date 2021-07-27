@@ -12,7 +12,7 @@ public class Main {
     Game      (int numberOfPlayers, List<Player> players, Player activePlayer, Player lastBetter,
                addPlayer(Player, player), bet(Die dieValue, int quantity), callLie(Player lastBetter));
     Cup       (List<Die> dicePool, addDice(int numOfDice), removeDie(), rollDice());
-    Die       (int numberOfSides, int faceUpValue, roll(), getFaceUpValue);
+    Die       (int numberOfSides, int faceUpValue, roll(), getFaceUpValue());
 
 
 
