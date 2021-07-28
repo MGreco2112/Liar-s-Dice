@@ -7,7 +7,7 @@ public class Main {
 
     Classes   Fields/Methods
 
-    Player    (String name, int score, Cup cup);
+    Player    (String name, int numberOfDice, Cup cup);
     Table     (Map<Die, Integer> tableDice);
     Game      (int numberOfPlayers, List<Player> players, Player activePlayer, Player lastBetter,
                addPlayer(Player, player), bet(Die dieValue, int quantity), callLie(Player lastBetter));
@@ -19,6 +19,6 @@ public class Main {
      */
 
     public static void main(String[] args) {
-	// write your code here
+
     }
 }
