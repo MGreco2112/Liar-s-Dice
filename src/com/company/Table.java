@@ -4,7 +4,8 @@ package com.company;
 import java.util.HashMap;
 
 public class Table {
-    public HashMap<Die, Integer> tableDice = new HashMap<>();
+    // Integer faceUpValue, Integer numberOfOccurances
+    public HashMap<Integer, Integer> tableDice = new HashMap<>();
 
 
 }

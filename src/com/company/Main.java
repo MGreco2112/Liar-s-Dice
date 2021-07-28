@@ -14,6 +14,17 @@ public class Main {
     Cup       (List<Die> dicePool, addDice(int numOfDice), removeDie(), rollDice());
     Die       (int numberOfSides, int faceUpValue, roll(), getFaceUpValue());
 
+    Required Features
+
+        Minimum 2 players
+        dice are hidden
+        Valid claims are made
+        Player can accuse previous player of lying
+        All dice are counted and player bid is evaluated correctly
+        Round loser looses one die
+        Player with no dice is removed from game
+        Last player standing is winner.
+
 
 
      */
