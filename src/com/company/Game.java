@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
-//TODO Fix end of game condition and add validation of bids
+//TODO add validation of bids
 
 public class Game {
     public int numberOfPlayers;
@@ -59,7 +59,9 @@ public class Game {
             }
         }
 
-        System.out.println(winner.name + " is the winner!\nPlay again? (Y)es\n(N)o\n");
+        System.out.println(winner.name + " is the winner!\nPlay again?\n(Y)es\n(N)o");
+
+        scanner.nextLine();
 
         String newGame = scanner.nextLine();
 
@@ -85,8 +87,11 @@ public class Game {
 
 
     //TODO Finish round() method
-    public void round() {
+    public String round() {
         checkGameStatus();
+        if (!gameIsActive) {
+            return "End of Game";
+        }
         for (Player player : players) {
             player.cup.rollDice();
 
@@ -146,7 +151,10 @@ public class Game {
             }
         }
         checkGameStatus();
-
+        if (!gameIsActive) {
+            return "End of Game";
+        }
+        return "End of Round";
     }
 
     private String createPlayer() {
@@ -196,9 +204,8 @@ public class Game {
             }
         }
 
-        System.out.println("Out Players: " + outPlayers + "\nNumber of Players: " + numberOfPlayers);
-        gameIsActive = numberOfPlayers - 1 < outPlayers;
-        System.out.println("Game is Active:" + gameIsActive);
+
+        gameIsActive = numberOfPlayers - 1 > outPlayers;
     }
 
     private String showTableDice() {
