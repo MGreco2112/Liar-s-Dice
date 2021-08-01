@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
-//TODO add validation of bids
 
 public class Game {
     public int numberOfPlayers;
@@ -86,7 +85,6 @@ public class Game {
     }
 
 
-    //TODO Finish round() method
     public String round() {
         checkGameStatus();
         if (!gameIsActive) {
@@ -133,7 +131,7 @@ public class Game {
                     } while (choice <= 0 || choice > 2);
 
                     switch (choice) {
-                        //TODO Refine this into a valid/invalid betting system
+
                         case 1:
                             secondBet();
                             break;
@@ -141,7 +139,6 @@ public class Game {
                         case 2:
                             System.out.println(activePlayer.name + " claims " + lastBetter.name + " is lying...");
                             callLiar();
-                            round();
                             break;
 
                         default:
